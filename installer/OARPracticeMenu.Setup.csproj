@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>OAR-Mod-Menu-v1.0.0-Setup</AssemblyName>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Product>OAR Mod Menu</Product>
+    <Description>Instalador de OAR Mod Menu v1.0.0</Description>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <DebugType>none</DebugType>
+    <Deterministic>true</Deterministic>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <PackagePath Condition="'$(PackagePath)' == ''">..\build\package.zip</PackagePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(PackagePath)" LogicalName="OARPracticeMenu.Package.zip" />
+  </ItemGroup>
+</Project>
